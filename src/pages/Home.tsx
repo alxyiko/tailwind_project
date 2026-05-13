@@ -1,15 +1,8 @@
-const Home = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-white-500 text-white">
-      <h1 className="text-4xl font-bold font-mono"></h1>
-      <img 
-        src="/scubacat.gif"
-        alt="Scuba cat animation"
-        className="w-96 h-auto"
-      />
-    
-    </div>
-  )
-}
+import React from 'react';
+import UntouchableCat from '../components/UntouchableCat';
 
-export default Home
+const Home: React.FC = () => {
+  return <UntouchableCat />;
+};
+
+export default Home;
