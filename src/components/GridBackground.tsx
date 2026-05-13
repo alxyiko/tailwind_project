@@ -1,9 +1,14 @@
 import React from 'react';
 
-const Home: React.FC = () => {
+interface GridBackgroundProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+const GridBackground: React.FC<GridBackgroundProps> = ({ children, className = '' }) => {
   return (
     <div 
-      className="relative min-h-screen flex flex-col items-center justify-center"
+      className={`relative ${className}`}
       style={{
         backgroundImage: `
           linear-gradient(to right, black 1px, transparent 1px),
@@ -13,15 +18,9 @@ const Home: React.FC = () => {
         backgroundPosition: 'center center',
       }}
     >
-      <img
-        src="/scubacat.gif"
-        alt="Scuba cat animation"
-        className="w-80 md:w-96 h-auto"
-      />
-      
-    
+      {children}
     </div>
   );
 };
 
-export default Home;
+export default GridBackground;
